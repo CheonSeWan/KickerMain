@@ -1,0 +1,84 @@
+body {
+    background-color: #f9fafb;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.scroll-box {
+    width: 800px;
+    height: 300px;
+    overflow: auto;
+    margin: 0 auto;
+    text-align: justify;
+    border: 1px solid #ccc;
+}
+h1 {
+    text-align: center; 
+    color: #f22;
+}
+.radio-buttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 690px;
+}
+
+.radio-buttons label {
+    display: inline-block;
+    margin: 0 5px; /* 좌우 여백을 조절하세요 */
+}
+
+.payment-methods {
+    text-align: center; /* 전체적으로 가운데 정렬 */
+}
+
+.method {
+    display: inline-block; /* 좌우로 배치 */
+}
+
+.payment-methods button {
+    padding: 20px 40px; /* 버튼 크기 조정 */
+    font-size: 18px; /* 버튼 텍스트 크기 조정 */
+}
+button.mu {
+    background-color: #fff; /* 배경색을 흰색(#fff)으로 설정 */
+    border: 1px solid #ccc; /* 글자색을 검은색(#000)으로 설정 */
+}
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buttons button {
+    padding: 15px 30px;
+    background-color: #f22; /* 버튼 배경색 지정 */
+    color: #fff; /* 버튼 텍스트 색상 지정 */
+    border: none;
+    border-radius: 5px; /* 둥근 테두리를 위한 속성 */
+    cursor: pointer;
+}
+
+.buttons button.cancel {
+    background-color: #f22; /* 취소 버튼 배경색 지정 */
+}
+
+/* 아래 스타일을 추가하여 버튼 간격과 크기를 조절합니다. */
+.buttons button:not(:last-child) {
+    margin-right: 30px; /* 버튼 간격을 지정합니다. */
+}
+h2{
+    color: #f22;
+    text-align: center;
+}
+form {
+    background-color: #fffffff5;; /* 배경색을 흰색(#fff)으로 설정 */
+    border: 2px solid #ccc; /* 테두리 추가 */
+    border-radius: 15px; /* 모서리를 둥글게 만듭니다. */
+    padding: 20px; /* 내부 여백 추가 */
+}

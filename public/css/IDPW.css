@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh; /* 뷰포트 높이에 맞춤 */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9fafb; /* 배경색 적용 */
+}
+
+.mainCon {
+    width: 400px;
+    height: 370px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mainCon > h2{
+    font-size: 24px;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.styled-input {
+    border: 1px solid #fff;
+    border-radius: 6px;
+    display: block;
+    width: 325px; /* 너비 조절 */
+    height: 50px; /* 높이 조절 */
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: #F8F8F8;
+    margin-bottom: 13px; /* 위아래 간격을 조절 */
+    color: #d2d2d2; /* 폰트 색 적용 */
+}
+
+.styled-input::placeholder {
+    color: #d2d2d2; /* 입력창 placeholder 폰트 색 적용 */
+}
+
+.findIdPw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.findIdPw p input[type="text"]:focus {
+    outline: 2px solid #000;
+    border-color: #ff0000;
+}
+
+.findBtn {
+    text-align: center;
+}
+
+.findBtn input[type="submit"], .findBtn input[type="button"] {
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 15px 40px;
+    margin: 30px 18px;
+}
+
+.findBtn input[type="submit"]:hover, .findBtn input[type="button"]:hover {
+    background-color: #ff0000;
+}
+
+.findBtn input[type="submit"], .findBtn input[type="button"], .registerTitle {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-links a {
+    margin: 0 10px;
+    padding: 0;
+
+}
+
+.center-links a:nth-child(1) {
+    margin-left: 0; /* 회원가입 왼쪽 밑에 배치 */
+    color: #000; /* 링크 색상을 빨간색으로 변경 */
+    text-decoration: none; 
+}
+
+.center-links a:nth-child(2) {
+    margin: 0 auto; /* 로그인 가운데 밑에 배치 */
+    color: #000; /* 링크 색상을 빨간색으로 변경 */
+    text-decoration: none; 
+}
+
+.center-links a:nth-child(3) {
+    margin-right: 0; /* 비밀번호 찾기 오른쪽 밑에 배치 */
+    color: #000; /* 링크 색상을 빨간색으로 변경 */
+    text-decoration: none; /* 링크의 밑줄 제거 */
+}

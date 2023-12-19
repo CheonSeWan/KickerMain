@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디/비밀번호 찾기</title>
+    <link rel="stylesheet" href="IDPW.css">
+</head>
+<body>
+    <section>
+    <div class="mainCon">
+        <h2>아이디 찾기</h2>
+        <form action="member_process.php?mode=findId" method="post">
+            <div class="findIdPw">
+                <div class="input-wrapper">
+                    <input type="text" name="name" placeholder="이름 입력" size="30" required class="styled-input">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" name="email" placeholder="이메일 입력" size="30" required class="styled-input">
+                </div>
+            </div>
+            <div class="findBtn">
+                <input type="submit" value="찾기">&nbsp;&nbsp;&nbsp;
+                <input type="button" value="취소" onclick="history.back(1)">
+            </div>
+        </form>
+        <div class="center-links">
+            <a href="/join">회원가입</a>
+            <a href="/login">로그인</a>
+            <a href="/PW">비밀번호 찾기</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>

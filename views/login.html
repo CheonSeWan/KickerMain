@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <header class="images">
+        <a href="/layout.html"><img src="/img/Logo.png"></a>
+    </header>
+    <div class="login-wrapper">
+        <h2>로그인</h2>
+        <form method="post" action="/auth/login" id="login-form">
+            <input type="email" name="email" id="signInemail" placeholder="이메일">
+            <input type="password" name="password" id="signInpassword" placeholder="비밀번호">
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check"> 아이디 저장하기
+            </label>
+            <button type="submit" id="signInButton" value="로그인">로그인</button>
+            <div class="additional-links">
+                <a href="/join">회원가입</a>
+                <a href="/IDPW">ID/PW 찾기</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('signInButton').addEventListener('click', (event) => {
+            event.preventDefault();
+    
+            const email = document.getElementById('signInemail').value;
+            const password = document.getElementById('signInpassword').value;
+    
+            // 클라이언트에서 서버로 로그인 요청을 보내는 코드 작성
+            fetch('/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data === true) {
+                    // 로그인 성공 시 /layout.html로 리다이렉션
+                    window.location.href = '/layout.html';
+                } else {
+                    console.log('로그인 실패');
+                }
+            })
+            .catch(error => {
+                console.error('로그인 실패', error);
+            });
+        });
+    </script>
+    
+</body>
+</html>
